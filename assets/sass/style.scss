@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.text-active {
+    font-weight: bold;
+    color: red;
+}
+
+@import './alert';
+@import './navbar';
+@import './main';
+@import './content';
+@import './modal';

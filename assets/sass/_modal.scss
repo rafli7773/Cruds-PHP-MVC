@@ -1,0 +1,72 @@
+@import './mixin';
+
+
+.modal{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    opacity: 0;
+    transform: scale(1.1);
+    visibility: hidden;
+    transition: visibility 0s, linear .25s, opacity .25s 0s, transform .25s;
+
+    .modal-content{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 50%;
+        min-height: 70vh;
+        background-color: white;
+        border-radius: 5px;
+        
+        .close{
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            .modal-close{
+                background-color: lightgrey;
+                padding: 16px;
+                font-weight: bold;
+                line-height: 1.5em;
+                border-radius: 5px;
+                cursor: pointer;
+                &:hover{
+                    background-color: darkgrey;
+                }
+            }
+        }
+
+        h1, form{
+            margin-left: 25px;
+            margin-bottom: 25px;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+
+            input{
+                @include input(80%);
+                margin-bottom: 25px;
+            }
+
+            button{
+                @include buttonPrimary;
+            }
+        }
+    }
+}
+
+.show-modal{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: visibility 0s, linear 0s, opacity .25s 0s, transform .25s;
+}

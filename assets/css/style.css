@@ -1,0 +1,428 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.text-active {
+  font-weight: bold;
+  color: red;
+}
+
+.container-alert {
+  position: fixed;
+  top: 15%;
+  background-color: grey;
+}
+
+.alert {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: lime;
+  border-radius: 5px;
+  opacity: 1;
+  -webkit-transition: all .4s ease-out;
+  transition: all .4s ease-out;
+  color: white;
+}
+
+.close-alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  border-left: 1px solid black;
+  padding: 10px;
+}
+
+.message {
+  margin-left: 25px;
+}
+
+.close-alert button {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 10px;
+  cursor: pointer;
+  height: 100%;
+}
+
+.alert-fades {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+nav .dropdown {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 10vh;
+  background-color: #106480;
+}
+
+nav .dropdown .projects, nav .dropdown .products {
+  position: relative;
+}
+
+nav .dropdown .projects ul, nav .dropdown .products ul {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  list-style: none;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+nav .dropdown .projects li, nav .dropdown .products li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+nav .dropdown .projects li:hover, nav .dropdown .products li:hover {
+  background-color: lightblue;
+}
+
+nav .dropdown .projects a, nav .dropdown .products a {
+  color: black;
+  text-decoration: none;
+}
+
+nav .dropdown button, nav .home {
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+nav .dropdown button:hover, nav .home:hover {
+  color: #858383;
+}
+
+nav .projects button:focus + ul, nav .products button:focus + ul {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  pointer-events: all;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  width: 70%;
+  border-radius: 5px 5px 0 0;
+  -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.5);
+}
+
+.content header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+  background-color: #017297;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px 5px 0 0;
+}
+
+.content header button {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: dodgerblue;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.content header button:hover, .content header button:focus {
+  background-color: #136cc5;
+}
+
+.content header button:active {
+  background-color: #03396e;
+}
+
+.content header input {
+  outline: none;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 50%;
+}
+
+.content header input:focus {
+  -webkit-box-shadow: 0 0 7px 0 dodgerblue;
+          box-shadow: 0 0 7px 0 dodgerblue;
+}
+
+.content table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 200px;
+}
+
+.content table thead tr {
+  background-color: grey;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content table th, .content table td {
+  padding: 12px 15px;
+}
+
+.content table tbody td {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content table tbody:nth-of-type(even) {
+  background-color: #dddddd;
+}
+
+.content table .hapus {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #f81a1a;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.content table .hapus:hover, .content table .hapus:focus {
+  background-color: #ce0b0b;
+}
+
+.content table .hapus:active {
+  background-color: #9e0505;
+}
+
+.content table .edit {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #09df09;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.content table .edit:hover, .content table .edit:focus {
+  background-color: #05bb05;
+}
+
+.content table .edit:active {
+  background-color: #037e03;
+}
+
+.modal {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  visibility: hidden;
+  -webkit-transition: visibility 0s, linear .25s, opacity .25s 0s, -webkit-transform .25s;
+  transition: visibility 0s, linear .25s, opacity .25s 0s, -webkit-transform .25s;
+  transition: visibility 0s, linear .25s, opacity .25s 0s, transform .25s;
+  transition: visibility 0s, linear .25s, opacity .25s 0s, transform .25s, -webkit-transform .25s;
+}
+
+.modal .modal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  min-height: 70vh;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.modal .modal-content .close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+.modal .modal-content .close .modal-close {
+  background-color: lightgrey;
+  padding: 16px;
+  font-weight: bold;
+  line-height: 1.5em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal .modal-content .close .modal-close:hover {
+  background-color: darkgrey;
+}
+
+.modal .modal-content h1, .modal .modal-content form {
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+
+.modal .modal-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+}
+
+.modal .modal-content form input {
+  outline: none;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 25px;
+}
+
+.modal .modal-content form input:focus {
+  -webkit-box-shadow: 0 0 7px 0 dodgerblue;
+          box-shadow: 0 0 7px 0 dodgerblue;
+}
+
+.modal .modal-content form button {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: dodgerblue;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.modal .modal-content form button:hover, .modal .modal-content form button:focus {
+  background-color: #136cc5;
+}
+
+.modal .modal-content form button:active {
+  background-color: #03396e;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: visibility 0s, linear 0s, opacity .25s 0s, -webkit-transform .25s;
+  transition: visibility 0s, linear 0s, opacity .25s 0s, -webkit-transform .25s;
+  transition: visibility 0s, linear 0s, opacity .25s 0s, transform .25s;
+  transition: visibility 0s, linear 0s, opacity .25s 0s, transform .25s, -webkit-transform .25s;
+}
+/*# sourceMappingURL=style.css.map */

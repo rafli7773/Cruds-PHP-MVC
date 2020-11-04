@@ -1,0 +1,67 @@
+nav{
+    .dropdown{
+        position: fixed;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        height: 10vh;
+        background-color: rgb(16, 100, 128);
+
+        .projects, .products {
+            position: relative;
+        }
+
+        .projects ul, .products ul{
+            position: absolute;
+            display: flex;
+            left: 0;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 7px 0 rgba(0, 0, 0, .5);
+            margin-top: 10px;
+            list-style: none;
+            pointer-events: none;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all .4s ease;
+        }
+        .projects li, .products li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            &:hover{
+                background-color: lightblue;
+            }
+        }
+        .projects a, .products a{
+            color: black;
+            text-decoration: none;
+        }
+    }
+    .dropdown button, .home{
+        outline: none;
+        border: none;
+        background: none;
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
+        &:hover{
+            color: rgb(133, 131, 131);
+        }
+    }
+
+    .projects button:focus + ul, .products button:focus + ul{
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;
+    }
+}

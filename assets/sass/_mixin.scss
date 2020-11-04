@@ -1,0 +1,60 @@
+@mixin input($width) {
+    outline: none;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: $width;
+
+    &:focus{
+        box-shadow: 0 0 7px 0 dodgerblue;
+    }
+}
+
+@mixin buttonPrimary {
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    color: white;
+    background-color:dodgerblue;
+    padding: 15px;
+    cursor: pointer;
+
+    &:hover, &:focus{
+        background-color: rgb(19, 108, 197);
+    }
+    &:active{
+        background-color: rgb(3, 57, 110);
+    }
+}
+@mixin buttonDanger {
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    color: white;
+    background-color:rgb(248, 26, 26);
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover, &:focus{
+        background-color:rgb(206, 11, 11);
+    }
+    &:active{
+        background-color:rgb(158, 5, 5);
+    }
+}
+@mixin buttonSuccess {
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    color: white;
+    background-color:rgb(9, 223, 9);
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover, &:focus{
+        background-color:rgb(5, 187, 5);
+    }
+    &:active{
+        background-color:rgb(3, 126, 3);
+    }
+}

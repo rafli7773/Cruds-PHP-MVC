@@ -1,0 +1,52 @@
+@import './mixin';
+
+.content{
+    width: 70%;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, .5);
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: rgb(1, 114, 151);
+        align-items: center;
+        border-radius: 5px 5px 0 0;
+        
+        button{
+            @include buttonPrimary;
+        }
+    
+        input{
+            @include input(50%);
+        }
+    }
+    table{
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 200px;
+
+        thead tr{
+            background-color: grey;
+            text-align: left;
+            font-weight: bold;
+        }
+        th, td{
+            padding: 12px 15px;
+        }
+        tbody td{
+            border-bottom: 1px solid #dddddd;
+        }
+        tbody {
+            &:nth-of-type(even){
+                background-color: #dddddd;
+            }
+        }
+        .hapus{
+            @include buttonDanger;
+        }
+        .edit{
+            @include buttonSuccess;
+        }
+    }
+}
